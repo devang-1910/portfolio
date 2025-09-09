@@ -20,7 +20,8 @@ services:
     name: portfolio-frontend
     env: static
     plan: free
-    buildCommand: npm install && npm run build
+    rootDir: frontend
+    buildCommand: yarn install && yarn build
     staticPublishPath: ./build
     envVars:
       - key: REACT_APP_BACKEND_URL
